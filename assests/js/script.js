@@ -1,3 +1,4 @@
+// Defining all my vars
 var timerElement = document.getElementById("timer");
 var leaderboards = [];
 var quizQuestions = [
@@ -43,14 +44,14 @@ textboxElement.style.display = "none";
 
 
 
-// this starts the quiz
+// function that starts the quiz when the button is clicked
 function startButtonClicked() {
     setQuestion();
     startElement.style.display = "none";
     timerInterval = setInterval(updateTimer, 1000);
 };
 
-// this starts the timer when test starts
+// start the timer when the quiz is started
 function updateTimer() {
     timeLeft--;
     timerElement.textContent = timeLeft;
@@ -59,7 +60,7 @@ function updateTimer() {
     }
 };
 
-// this goes through the questions
+// loop through my questions
 function setQuestion() {
     var currentQuestion = quizQuestions[currentQuestionIndex];
     questionElement.textContent = currentQuestion.question;
@@ -73,7 +74,7 @@ function setQuestion() {
         optionsElement.appendChild(choice);
     };
 };
-// this function checks the answers out of the quiz
+// compare user answer to the correct asnswer 
 function checkAnswer(answerIndex) {
     var currentQuestion = quizQuestions[currentQuestionIndex];
     if (timeLeft <= 0) {
@@ -92,7 +93,7 @@ function checkAnswer(answerIndex) {
     }
 };
 
-// this functions ends the quiz
+// ends the quiz and hides most unwanted content
 function endQuiz() {
     clearInterval(timerInterval);
     endTime = timeLeft;
@@ -103,7 +104,7 @@ function endQuiz() {
     questionElement.textContent = "Your score is " + score + " out of 4, with " + endTime + " seconds left. Enter your initials and click submit to save your score!";
 };
 
-// this function displays the highscore in the screen and stores it
+// displays highscore and stores it in local storage
 function displayHighscore() {
     var storedHighScore = localStorage.getItem("leaderboards");
     if (storedHighScore) {
@@ -113,7 +114,7 @@ function displayHighscore() {
 }
 
 
-// This function saves the score into the storage
+// this function saves the score into the storage
 function saveScore() {
     var initials = textboxElement.value;
     var totalScore = {

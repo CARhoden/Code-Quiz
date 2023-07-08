@@ -1,0 +1,86 @@
+body {
+    background-color: black;
+}
+
+
+#quiz-container {
+    text-align: center;
+    align-items: center;
+    padding: 155px;
+    width: 300px;
+    height: 150px;
+    border-style: solid;
+    position: absolute;
+    left: 37%;
+    top: 20%;
+    background-color: white;
+}
+
+.leaderboard-link {
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+}
+
+.leaderboard-link a {
+    text-decoration: none;
+    color: black;
+    font-weight: 1000;
+}
+
+#options {
+    list-style-type: none;
+    padding-left: 5%;
+    border-style: solid;
+    border-radius: 2px black;
+    cursor: pointer;
+}
+
+
+#initials {
+    position: absolute;
+    left: 220px;
+}
+
+
+#submit-button {
+    position: absolute;
+    left: 280px;
+    bottom: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+/* this css portion is for the leaderboard html style */
+#leaderboard {
+    text-align: center;
+    align-items: center;
+    padding: 160px;
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    left: 28%;
+    top: 10%;
+    background-color: white;
+
+}
+
+#leaderboard-list {
+    list-style-type: none;
+}
+
+#gameStart {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    border-style: solid;
+    border-radius: 2px black;
+    border-width: 2px;
+}
